@@ -1,11 +1,14 @@
-import './App.css'
+import Header from './components/Header'
+import JokeInfo from './components/JokeInfo'
+import Footer from './components/Footer'
+import './sass/main.scss'
 
 function App() {
 
   return (
     <>
       <Header />
-      <Main />
+      <JokeInfo />
       <Footer />
     </>
   )
