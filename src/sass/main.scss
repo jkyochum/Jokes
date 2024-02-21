@@ -1,1 +1,19 @@
 @import 'resets', 'variables';
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.page-icon {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    font-style: normal;
+    z-index: 1;
+}
+
+.exclamation {
+    width: 29px;
+    transform: rotate(25deg);
+}
