@@ -7,9 +7,6 @@ export default function JokeInfo() {
         }
     )
 
-    console.log(formInfo)
-
-
     function handleChange(event) {
         const { name, value } = event.target
         setFormInfo(() => {
@@ -19,10 +16,14 @@ export default function JokeInfo() {
         })
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(formInfo)
+    }
 
     return (
         <div className="main">
-            <form>
+            <form className="jokes-form" onSubmit={handleSubmit}>
                 <label htmlFor="typeOfJoke">What Kind of Joke Would You Like?</label>
                 <select
                     id="typeOfJoke"
