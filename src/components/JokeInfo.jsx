@@ -7,6 +7,8 @@ export default function JokeInfo() {
         }
     )
 
+    const [jokeData, setJokeData] = useState({})
+
     function handleChange(event) {
         const { name, value } = event.target
         setFormInfo(() => {
@@ -18,9 +20,15 @@ export default function JokeInfo() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(formInfo)
     }
 
+    useEffect(() => {
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then(res => res.json())
+            .then(data => setJokeData(data))
+    }, [])
+
+    console.log(jokeData.value)
     return (
         <div className="main">
             <form className="jokes-form" onSubmit={handleSubmit}>
@@ -38,7 +46,7 @@ export default function JokeInfo() {
                 <button>Get a Joke</button>
             </form>
             <section className="jokeDisplay">
-                <h1>This is a {formInfo.typeOfJoke} joke.</h1>
+                <h1>{jokeData.value}</h1>
             </section>
         </div>
     )
