@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function JokeInfo() {
     const [formInfo, setFormInfo] = useState(
@@ -37,6 +37,9 @@ export default function JokeInfo() {
                 </select>
                 <button>Get a Joke</button>
             </form>
+            <section className="jokeDisplay">
+                <h1>This is a {formInfo.typeOfJoke} joke.</h1>
+            </section>
         </div>
     )
 }
