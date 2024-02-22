@@ -3,6 +3,17 @@
 .header {
     display: flex;
     align-items: center;
+    height: 120px;
+    background-color: $navy-blue;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #90E0EF;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 2px inset;
+    padding: 2px;
 }
 
 .page-icon {
@@ -14,6 +25,6 @@
 }
 
 .exclamation {
-    width: 29px;
-    transform: rotate(25deg);
+    width: 43px;
+    transform: rotate(25deg) translateX(-4px);
 }
